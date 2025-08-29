@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Bogotá</title>
+  <title>Portal Personas Bogotá</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,15 +14,28 @@
 
     body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
     }
 
     .background {
-      background: url('https://images.unsplash.com/photo-1573496782432-1d0c5e4517e0?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1597024225205-0fceea1f1cb4?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
       filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 100%;
       width: 100%;
+      z-index: -1;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.4);
       position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       z-index: -1;
     }
 
@@ -30,44 +44,49 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      padding: 50px 30px;
       text-align: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      color: white;
       max-width: 400px;
       width: 90%;
     }
 
     .content h1 {
-      color: white;
-      margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 25px;
+      font-weight: 600;
     }
 
     .btn {
-      background-color: #ffffffcc;
-      color: #333;
-      padding: 12px 24px;
+      background: linear-gradient(135deg, #00C9A7, #007CF0);
+      color: white;
+      padding: 14px 28px;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      border-radius: 30px;
       font-size: 16px;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #ffffffee;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 124, 240, 0.4);
     }
   </style>
 </head>
 <body>
 
   <div class="background"></div>
+  <div class="overlay"></div>
 
   <div class="content">
-    <h1>Bienvenido a Bogotá</h1>
-    <button class="btn">Explorar</button>
+    <h1>Ingresa al portal personas de Bogotá</h1>
+    <button class="btn">Ingresar</button>
   </div>
 
 </body>
